@@ -1,7 +1,7 @@
 "use strict";
 console.log("Meteo App");
 /**
- * Classe météo
+ * Météo
  */
 var Meteo = /** @class */ (function () {
     function Meteo(_ville, _temperature) {

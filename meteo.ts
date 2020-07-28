@@ -1,7 +1,7 @@
 console.log("Meteo App");
 
 /**
- * Classe météo
+ * Météo
  */
 class Meteo {
     constructor(private _ville: string, private _temperature: number) {
