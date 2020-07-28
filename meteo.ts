@@ -7,7 +7,9 @@ class Meteo {
     constructor(private _ville: string, private _temperature: number) {
     }
 
-    // Affichage de la température de la ville
+    /**
+     * Affichage de la température
+     */
     toString(): string {
         return `${this._ville} - ${this._temperature}°C`;
     }

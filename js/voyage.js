@@ -27,6 +27,12 @@ var Sejour = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    /**
+     * Affichage du séjour
+    */
+    Sejour.prototype.toString = function () {
+        return this._nom + " - " + this._prix + "\u20AC";
+    };
     return Sejour;
 }());
 /**
@@ -35,8 +41,8 @@ var Sejour = /** @class */ (function () {
 var SejourService = /** @class */ (function () {
     function SejourService() {
         this._sejour = [];
-        this._sejour.push(new Sejour("Visite de Paris", 500));
-        this._sejour.push(new Sejour("Voyage à Rio", 800));
+        this._sejour.push(new Sejour("Paris", 500));
+        this._sejour.push(new Sejour("Rio", 800));
     }
     // Rechercher un séjour
     SejourService.prototype.findByName = function (name) {
@@ -52,4 +58,4 @@ var SejourService = /** @class */ (function () {
 }());
 // Recherche de séjour à Paris
 var viewSejour = new SejourService();
-console.log(viewSejour.findByName("Visite de Paris7"));
+console.log(viewSejour.findByName("Paris").toString());

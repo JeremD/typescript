@@ -19,6 +19,13 @@ class Sejour {
         return this._prix;
     }
 
+    /**
+     * Affichage du séjour
+    */ 
+    public toString() : string {
+        return `${this._nom} - ${this._prix}€`;
+    }
+
 }
 
 /**
@@ -27,8 +34,8 @@ class Sejour {
 class SejourService {
     private _sejour: Sejour[] = [];
     constructor() {
-        this._sejour.push(new Sejour("Visite de Paris", 500));
-        this._sejour.push(new Sejour("Voyage à Rio", 800));
+        this._sejour.push(new Sejour("Paris", 500));
+        this._sejour.push(new Sejour("Rio", 800));
     }
 
     // Rechercher un séjour
@@ -45,4 +52,4 @@ class SejourService {
 
 // Recherche de séjour à Paris
 const viewSejour = new SejourService();
-console.log(viewSejour.findByName("Visite de Paris7"));
+console.log(viewSejour.findByName("Paris").toString());
