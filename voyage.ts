@@ -32,15 +32,17 @@ class SejourService {
     }
 
     // Rechercher un séjour
-    public findByName(name: string): Sejour | void {
+    public findByName(name: string): Sejour | string {
         for (const sejour of this._sejour) {
             if (sejour.nom === name) {
                 return sejour;
             }
+
+            return (`Pas de séjour à ${name}`);
         }
     }
 }
 
 // Recherche de séjour à Paris
 const viewSejour = new SejourService();
-console.log(viewSejour.findByName("Visite de Paris"));
+console.log(viewSejour.findByName("Visite de Paris7"));

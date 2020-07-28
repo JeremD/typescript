@@ -45,10 +45,11 @@ var SejourService = /** @class */ (function () {
             if (sejour.nom === name) {
                 return sejour;
             }
+            return ("Pas de s\u00E9jour \u00E0 " + name);
         }
     };
     return SejourService;
 }());
 // Recherche de séjour à Paris
 var viewSejour = new SejourService();
-console.log(viewSejour.findByName("Visite de Paris"));
+console.log(viewSejour.findByName("Visite de Paris7"));
